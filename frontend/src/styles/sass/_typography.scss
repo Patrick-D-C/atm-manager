@@ -1,0 +1,108 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: "Roboto", sans-serif;
+  color: $black-normal;
+}
+a {
+  text-decoration: none;
+}
+
+.link {
+  padding: 8px 24px;
+  font-size: 18px;
+
+  transition: 0.5s ease;
+
+  position: relative;
+  display: inline-flex;
+  align-content: center;
+
+  &::after {
+    content: "";
+    display: inline-block;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 0%;
+    height: 2px;
+
+    transform: translate(20%, -50%);
+    transition: 0.5s ease;
+
+    background-color: $theme-normal;
+  }
+  &:hover {
+    opacity: 0.8;
+
+    &::after {
+      width: 70%;
+    }
+  }
+}
+
+h1 {
+  font-size: 72px;
+  line-height: 100%;
+  font-weight: 900;
+}
+h2 {
+  font-size: 56px;
+  line-height: 110%;
+  font-weight: 800;
+}
+h3 {
+  font-size: 40px;
+  line-height: 110%;
+  font-weight: 800;
+}
+h4 {
+  font-size: 32px;
+  line-height: 120%;
+  font-weight: 700;
+}
+h5 {
+  font-size: 24px;
+  line-height: 130%;
+  font-weight: 700;
+}
+h6 {
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 960px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3.5rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  h4 {
+    font-size: 2.5rem;
+  }
+  h5 {
+    font-size: 2rem;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}

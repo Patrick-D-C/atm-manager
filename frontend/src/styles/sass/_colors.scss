@@ -1,0 +1,21 @@
+$black-normal: #191919;
+$black-light: #282828;
+$black-dark: #0B0B0B;
+
+$white-normal:#F2F2F2;
+$white-light:#FFFFFF;
+$white-dark:#E6E6E6;
+
+$theme-normal:#5200FC;
+$theme-light:#3B0FFF;
+$theme-dark:#5300DF;
+
+$gray-1: #777;
+$gray-light: #c2c2c2;
+
+.color-gray{
+    color: $gray-1;
+}
+.color-theme-n{
+    color: $theme-light;
+}
