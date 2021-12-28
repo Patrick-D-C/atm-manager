@@ -6,16 +6,19 @@ import { AuthProvider } from './context/auth';
 
 import Routes from './routes';
 import "./styles/globals.scss";
+import { BrowserRouter } from 'react-router-dom';
 
 
 
 function App() {
   return (
     <AuthProvider>
-      <Component>
-        <Routes />
-        <NotificationBar />
-      </Component>
+      <BrowserRouter>
+        <Component>
+          <Routes />
+          <NotificationBar />
+        </Component>
+      </BrowserRouter>
     </AuthProvider>
   )
 }

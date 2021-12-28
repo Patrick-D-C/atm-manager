@@ -13,7 +13,7 @@ import { List as PacotesList } from '../pages/Packages/List';
 const AuthRoutes: React.FC = () => {
     const { user } = useAuth();
     return (
-        <BrowserRouter>
+        <>
             <Route path="/painel" component={Dashboard} />
             <Route path="/operacoes" exact component={OperacoesList} />
             <Route path="/operacoes/novo" component={OperacoesCreate} />
@@ -22,7 +22,7 @@ const AuthRoutes: React.FC = () => {
             )}
             <Route path="/usuario/edit" component={ClientEdit} />
             <Route path="/" exact component={Home} />
-        </BrowserRouter>
+        </>
     )
 
 }

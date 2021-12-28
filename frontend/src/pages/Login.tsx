@@ -3,6 +3,7 @@ import * as yup from 'yup';
 import { Form, Field } from 'react-final-form'
 
 import { useAuth } from "../context/auth";
+import { validateFormValues } from "../context/validateFormValues";
 
 import { Input } from "../components/Input";
 import { Hero } from "../components/Hero";
@@ -11,7 +12,7 @@ import { Button, InputAdornment } from "@material-ui/core";
 import { AccountCircle, ArrowBack, Lock } from "@material-ui/icons";
 
 import "../styles/home.scss";
-import { validateFormValues } from "../context/validateFormValues";
+
 
 
 const validationSchema = yup.object({

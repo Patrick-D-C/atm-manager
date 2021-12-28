@@ -6,11 +6,11 @@ import { Register } from '../pages/Register';
 
 const SignRoutes: React.FC = () => {
     return (
-        <BrowserRouter>
+        <>
             <Route path="/" exact component={Home} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />           
-        </BrowserRouter>
+        </>
     );
 }
 

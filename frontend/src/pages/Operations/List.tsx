@@ -25,7 +25,7 @@ const indStatusOp = [
 ];
 
 const indPrefNoteOpe = [
-  "Nenhuma", 10, 50, 100
+  "Nenhuma", currencyFormat(10), currencyFormat(50), currencyFormat(100)
 ];
 
 
@@ -56,7 +56,7 @@ export function List() {
           {user?.admin && (
             <TableCell>{row.client.name}</TableCell>
           )}
-          <TableCell align="right">{currencyFormat(row.value)}</TableCell>
+          <TableCell align="right">R$ {currencyFormat(row.value)}</TableCell>
           <TableCell align="center">{indPrefNoteOpe[row.pref_note]}</TableCell>
           <TableCell component="th" scope="row">
             {indStatusOp[row.status - 1] || ''}
@@ -86,8 +86,8 @@ export function List() {
                       {row.children_operation?.map((operation: IOperationProps, key) => {
                         return (
                           <TableRow key={key}>
-                            <TableCell align="right">{currencyFormat(operation.value)}</TableCell>
-                            <TableCell align="center">{indPrefNoteOpe[operation.pref_note]}</TableCell>
+                            <TableCell align="right">R$ {currencyFormat(operation.value)}</TableCell>
+                            <TableCell align="center">Notas de {indPrefNoteOpe[operation.pref_note]}</TableCell>
                             <TableCell component="th" scope="row">
                               {indStatusOp[operation.status - 1] || ''}
                             </TableCell>

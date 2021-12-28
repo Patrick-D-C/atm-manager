@@ -30,7 +30,7 @@ export function Home() {
             Login
           </Button>
           <div className="my-2">ou</div>
-          <Link to="/register" className="btn-outline-primary">Cadastrar</Link>
+          <Link to="/register" className="link">Cadastrar</Link>
         </div>
       </main>
     </div>

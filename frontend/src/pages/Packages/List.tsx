@@ -18,7 +18,7 @@ const indStatus = [
   "Aberto", "Fechado"
 ]
 const indTypeNote = [
-  "Nenhuma", 10, 50, 100
+  "Nenhuma", currencyFormat(10), currencyFormat(50), currencyFormat(100)
 ];
 
 
@@ -55,7 +55,7 @@ export function List() {
               return (
                 <TableRow key={key}>
                   <TableCell>{obgPackage.client.name}</TableCell>
-                  <TableCell align="center">{indTypeNote[obgPackage.type_note]} reais</TableCell>
+                  <TableCell align="center">{indTypeNote[obgPackage.type_note]}</TableCell>
                   <TableCell align="center">{obgPackage.quantity_notes}</TableCell>
                   <TableCell align="right">{currencyFormat(obgPackage.value)}</TableCell>
                   <TableCell>{indStatus[obgPackage.status - 1]}</TableCell>

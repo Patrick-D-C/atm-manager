@@ -51,7 +51,7 @@ function ClientForm(props: ClientForm) {
             render={({ handleSubmit }) => (
                 <form onSubmit={handleSubmit} noValidate>
                     <Grid container spacing={2}>
-                        <Grid item xs={9}>
+                        <Grid item xl={6} sm={12} xs={12}>
                             <Field
                                 name="email"
                                 render={({ input, meta }) => (
@@ -69,7 +69,7 @@ function ClientForm(props: ClientForm) {
                         </Grid>
                     </Grid>
                     <Grid container spacing={2}>
-                        <Grid item xs={9}>
+                        <Grid item xl={6} sm={12} xs={12}>
                             <Field
                                 name="password"
                                 render={({ input, meta }) => (
@@ -84,9 +84,7 @@ function ClientForm(props: ClientForm) {
                                 )}
                             />
                         </Grid>
-                    </Grid>
-                    <Grid container justifyContent="space-between" spacing={2}>
-                        <Grid item xs={6}>
+                        <Grid item lg={9} sm={12} xs={12}>
                             <Field
                                 name="name"
                                 render={({ input, meta }) => (
@@ -101,7 +99,9 @@ function ClientForm(props: ClientForm) {
                                 )}
                             />
                         </Grid>
-                        <Grid item xs={3}>
+                    </Grid>
+                    <Grid container spacing={2}>
+                        <Grid item xs={12} md={6} lg={3} >
                             <Field
                                 name="identity"
                                 render={({ input, meta }) => (
@@ -116,7 +116,7 @@ function ClientForm(props: ClientForm) {
                                 )}
                             />
                         </Grid>
-                        <Grid item xs={3}>
+                        <Grid item xs={12} md={6} lg={4}>
                             <Field
                                 name="date_birth"
                                 render={({ input, meta }) => (
@@ -137,7 +137,7 @@ function ClientForm(props: ClientForm) {
                         </Grid>
                     </Grid>
                     <Grid container justifyContent="space-between" spacing={2}>
-                        <Grid item xs={9}>
+                        <Grid item lg={9} xs={12}>
                             <Field
                                 name="address"
                                 render={({ input, meta }) => (
@@ -151,7 +151,7 @@ function ClientForm(props: ClientForm) {
                                 )}
                             />
                         </Grid>
-                        <Grid item xs={3}>
+                        <Grid item lg={3} xs={5}>
                             <Field
                                 name="number"
                                 render={({ input, meta }) => (
@@ -167,9 +167,7 @@ function ClientForm(props: ClientForm) {
                                 )}
                             />
                         </Grid>
-                    </Grid>
-                    <Grid container justifyContent="space-between" alignItems='center' spacing={2}>
-                        <Grid item xs={4}>
+                        <Grid item lg={4} xs={6}>
                             <Field
                                 name="district"
                                 render={({ input, meta }) => (
@@ -184,7 +182,7 @@ function ClientForm(props: ClientForm) {
                                 )}
                             />
                         </Grid>
-                        <Grid item xs={4}>
+                        <Grid item xs={12} md={6} xl={4}>
                             <Field
                                 name="city"
                                 render={({ input, meta }) => (
@@ -199,7 +197,7 @@ function ClientForm(props: ClientForm) {
                                 )}
                             />
                         </Grid>
-                        <Grid item xs={4}>
+                        <Grid item xs={12} sm={6}>
                             <Field
                                 name="state"
                                 render={({ input, meta }) => (

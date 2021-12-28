@@ -71,6 +71,7 @@ class OperationService {
               type_note: pref_note,
               value: 50 * nota,
               status: 2,
+              closed_at: amount < 50 && amount > 0 ? null : new Date(),
             });
             amount = amount - 50;
             valorRetirado = valorRetirado + 50 * nota;
@@ -110,6 +111,8 @@ class OperationService {
           over = arraySeparacao.over;
         }
       }
+      operation.status = amount < 50 && amount > 0 ? 2 : 3;
+      await operationsRepositories.save(operation);
     } else {
       //Se não
       //Cria operação e adiciona ao pacote
@@ -128,6 +131,7 @@ class OperationService {
         value: amount * 100,
         // 1 Aberto || 2 Fechado
         status: amount < 50 ? 1 : 2,
+        closed_at: amount < 50 && amount > 0 ? null : new Date(),
       });
     }
     return true;

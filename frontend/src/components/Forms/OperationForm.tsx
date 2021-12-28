@@ -15,7 +15,7 @@ interface OperationForm {
 
 
 const validationSchema = yup.object({
-    value: yup.number().max(5000, "Valor máximo R$ 5.000").min(10,"Valor minímo é 10 reais").required("É obrigatório informar um valor."),
+    value: yup.number().max(5000, "Valor máximo R$5.000").min(10,"Valor minímo é R$10").required("É obrigatório informar um valor."),
 });
 
 const validate = validateFormValues(validationSchema);

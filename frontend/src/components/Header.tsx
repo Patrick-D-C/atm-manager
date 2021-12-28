@@ -60,9 +60,9 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export function Header(props: any) {
-    const classes = useStyles();
-    const history = useHistory();
-    const { signed, logout, user } = useAuth();
+    let classes = useStyles();
+    let history = useHistory();
+    let { signed, logout, user } = useAuth();
 
     const { handleDrawerOpen, openDrawer } = props;
 
@@ -78,6 +78,7 @@ export function Header(props: any) {
 
     const handleLogout = () => {
         logout();
+        history.push('/login');
     }
     function navigateToPerfil() {
         history.push('/usuario/edit');
@@ -119,7 +120,7 @@ export function Header(props: any) {
                             open={Boolean(anchorEl)}
                             onClose={handleClose}
                         >
-                            <MenuItem><Button href="/usuario/edit">Edit Perfil</Button></MenuItem>
+                            <MenuItem onClick={navigateToPerfil}>Edit Perfil</MenuItem>
                             <MenuItem onClick={handleLogout}>Logout</MenuItem>
                         </Menu>
                     </React.Fragment>

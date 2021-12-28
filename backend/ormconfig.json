@@ -4,9 +4,10 @@
     "port": 5432,
     "username": "postgres",
     "password": "root",
-    "database": "frente",
+    "database": "fakeATM",
     "migrations": ["src/database/migrations/*.ts"],
     "entities": ["src/entities/*.ts"],
+    "seeds": ["src/database/seeds/*.ts"],
     "cli": {
         "migrationsDir": "src/database/migrations",
         "entitiesDir": "src/entities"

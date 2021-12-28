@@ -1,3 +1,5 @@
+@import 'sass/colors';
+
 #page-home {
   display: flex;
   align-items: stretch;
@@ -8,8 +10,8 @@
   aside {
     flex: 7;
 
-    background: #835afd;
-    color: white;
+    background: $theme-normal;
+    color: $white-light;
     text-align: center;
 
     display: flex;
@@ -25,7 +27,7 @@
     h2 {
       font-family: "Roboto";
       font-weight: 700;
-      color: #fff;
+      color: $white-light;
       font-size: 2.6rem;
     }
   }
